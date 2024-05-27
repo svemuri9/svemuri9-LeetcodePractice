@@ -3,7 +3,7 @@ class Solution {
        List<Integer>ans=new ArrayList<>() ;
        int n=nums.length;
        HashSet<Integer> set=new HashSet<>();
-       for(Integer val : nums){
+       for(int val : nums){
            set.add(val);
        }
        for(int i=1;i<=n;i++){
