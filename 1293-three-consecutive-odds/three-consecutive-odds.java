@@ -6,7 +6,7 @@ class Solution {
         {
             if (arr[i]%2==1) count++;
             if (count >=3) return true;
-            if (arr[i]%2==0) count=0;
+           if (arr[i]%2==0) count=0;
         }
         return false;
     }
