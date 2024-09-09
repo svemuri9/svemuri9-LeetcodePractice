@@ -13,3 +13,5 @@ class Solution {
         return closest;
     }
 }
+//Time - O(n)
+//Space - O(1)
