@@ -1,11 +1,22 @@
-class Solution {
+import java.util.HashMap;
+
+public class Solution {
     public boolean isAnagram(String s, String t) {
-        int seen1[] = new int[26];
-        int seen2[] = new int[26];
-        for(char c : s.toCharArray())
-            seen1[c-'a']++;
-        for(char c : t.toCharArray())
-            seen2[c-'a']++;
-        return Arrays.equals(seen1, seen2);
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        HashMap<Character, Integer> sMap = new HashMap<>();
+        HashMap<Character, Integer> tMap = new HashMap<>();
+
+        for (char c : s.toCharArray()) {
+            sMap.put(c, sMap.getOrDefault(c, 0) + 1);
+        }
+
+        for (char c : t.toCharArray()) {
+            tMap.put(c, tMap.getOrDefault(c, 0) + 1);
+        }
+
+        return sMap.equals(tMap);
     }
 }
